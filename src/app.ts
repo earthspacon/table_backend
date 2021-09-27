@@ -17,7 +17,7 @@ export const app = new Koa()
       disableVersioning: true,
     })
     app.use(
-      cors({ credentials: true, origin: 'https://just-table.herokuapp.com/' })
+      cors({ credentials: true, origin: 'https://localhost:3000/' })
     )
     app.use(bodyParser())
     app.use(router.routes())
