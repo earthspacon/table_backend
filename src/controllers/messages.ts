@@ -25,11 +25,11 @@ export default class {
     @Body('age') age: string,
     @Body('position') position: string,
     @Body('money') money: string,
-    @Body('xren') xren: string,
+    @Body('degree') degree: string,
     @CurrentUser() author: Ref<User>,
     @Ctx() ctx: Context
   ) {
-    const data = { author, fullname, age, position, money, xren }
+    const data = { author, fullname, age, position, money, degree }
     Object.keys(data).forEach((key) =>
       data[key] === undefined && delete data[key]
     )
@@ -59,7 +59,7 @@ export default class {
     @Body('age') age: string,
     @Body('position') position: string,
     @Body('money') money: string,
-    @Body('xren') xren: string,
+    @Body('degree') degree: string,
     @Ctx() ctx: Context
   ) {
     await MessageModel.updateOne(ctx.state.message, {
@@ -67,7 +67,7 @@ export default class {
       age,
       position,
       money,
-      xren,
+      degree,
     })
     ctx.status = 200
   }

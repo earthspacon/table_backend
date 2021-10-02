@@ -14,7 +14,7 @@ export class Message {
   @prop()
   money: string
   @prop()
-  xren: string
+  degree: string
 }
 
 export const MessageModel = getModelForClass(Message, {
